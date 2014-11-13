@@ -29,7 +29,6 @@ local pos2 = {x=160, y = 240}
 function game.drawframe()
   ej.clear()	-- default clear color is black (0,0,0,1)
   ps.group:draw()
-	ps:draw()
   obj:draw(pos)
 end
 
@@ -42,7 +41,10 @@ end
 function game.handle_error(...)
 end
 
-function game.resume()
+function game.on_resume()
+end
+
+function game.on_pause()
 end
 
 ej.start(game)

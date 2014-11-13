@@ -11,7 +11,7 @@ pack.load {
 local scissor = false
 local obj = ej.sprite("sample","mine")
 obj.resource.frame = 70
-obj.label.text = "Hello World"
+obj.label.text = "The #[red]quick#[green] brown #[blue]fox jumps#[stop] over the lazy dog"
 obj:ps(400,300)
 local screencoord = { scale = 1.2 }
 
@@ -50,7 +50,10 @@ end
 function game.handle_error(...)
 end
 
-function game.resume()
+function game.on_resume()
+end
+
+function game.on_pause()
 end
 
 ej.start(game)
